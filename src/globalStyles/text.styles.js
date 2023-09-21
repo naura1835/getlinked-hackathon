@@ -10,7 +10,7 @@ export const Heading1 = styled.h1`
   }
 
   @media ${breakpointsUp["desktop-up"]} {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 `;
 
@@ -25,7 +25,7 @@ export const Heading2 = styled.h2`
   }
 `;
 
-export const H3 = styled.h3`
+export const Heading3 = styled.h3`
   font-size: 1.25rem;
   font-weight: 600;
 
@@ -88,9 +88,11 @@ export const MediumText = styled.p`
 export const SmallMediumText = styled.p`
   font-size: 0.75rem;
   font-weight: 400;
+  text-align: center;
 
   @media ${breakpointsUp["tablet-landscape-up"]} {
     font-size: 0.875rem;
+    text-align: start;
   }
 `;
 

@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   }
   ${SvgWrapper} {
     order: 2;
-    margin-top: 5.38rem;
+    margin-top: 4.38rem;
 
     & + div {
       display: flex;
@@ -79,7 +79,8 @@ export const InnerWrapper = styled.div`
 
 export const FaqWrapper = styled.ol`
   list-style-type: none;
-  margin-top: 2.86rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
 `;
 export const FaqItem = styled.li`
   width: 100%;

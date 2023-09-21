@@ -52,8 +52,12 @@ const Footer = () => {
       <FooterSection>
         <Heading4>Contact Us</Heading4>
         <FooterList>
-          <FooterListItem>+234 679 81819</FooterListItem>
-          <FooterListItem style={{ width: "5.563rem" }}>
+          <FooterListItem>
+            <img src="src/assets/contact.png" alt="contact" />
+            +234 679 81819
+          </FooterListItem>
+          <FooterListItem style={{ width: "8.563rem" }}>
+            <img src="src/assets/location.png" alt="contact" />
             27,Alara Street Yaba 100012 Lagos State
           </FooterListItem>
         </FooterList>

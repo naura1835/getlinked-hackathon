@@ -77,14 +77,20 @@ export const FooterList = styled.ul`
 export const FooterListItem = styled.li`
   margin-bottom: 0.75rem;
   font-family: "Montserrat";
+  display: flex;
+  gap: 1rem;
 
   ${HighLightText} {
     margin-right: 1rem;
   }
   & > svg {
-    margin-right: 1rem;
     vertical-align: middle;
   }
+
+  & > img {
+    height: 100%;
+  }
+
   @media ${breakpointsUp["tablet-landscape-up"]} {
     margin-bottom: 1rem;
   }

@@ -20,6 +20,7 @@ body,
 }
 html {
   --scale-global: 0.4;
+  --scale-lg-global: 0.6;
 
   @media (min-width: 900px) {
     --scale-global: 0.6;

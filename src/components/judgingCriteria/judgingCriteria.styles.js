@@ -2,10 +2,8 @@ import { styled } from "styled-components";
 
 import { breakpointsUp } from "../../globalStyles/breakpoints";
 import { Heading2, HighLightText } from "../../globalStyles/text.styles";
-// import { SectionWrapper } from "../../globalStyles/global.styles";
 import { SvgWrapper } from "../section/section.styles";
 
-// export const Wrapper = styled(SectionWrapper)`
 export const Wrapper = styled.div`
   ${Heading2} {
     margin-bottom: 1rem;
