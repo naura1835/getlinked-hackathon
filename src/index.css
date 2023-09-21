@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&family=Unica+One&display=swap");
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./assets/fonts/clash-display/WEB/fonts/ClashDisplay-Regular.ttf");
+}
+
+html,
+body,
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+html {
+  --scale-global: 0.6;
+
+  @media (min-width: 900px) {
+    --scale-global: 1;
+  }
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
