@@ -6,10 +6,10 @@ import { GlobalStyle } from "./globalStyles/global.styles";
 
 // import Header from "./components/header/header.component";
 import HomePage from "./pages/home/home.component";
-
-import "./App.css";
 import Contact from "./pages/contact/contact.component";
 import Register from "./pages/register/register.component";
+
+import "./App.css";
 
 function App() {
   return (

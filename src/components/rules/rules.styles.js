@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Heading2 } from "../../globalStyles/text.styles";
 import { SvgWrapper } from "../section/section.styles";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.div`
   ${Heading2} {
@@ -12,6 +13,8 @@ export const Wrapper = styled.div`
       top: 20%;
       right: 12%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 4s;
     }
   }
   ${SvgWrapper} {
@@ -21,6 +24,8 @@ export const Wrapper = styled.div`
       top: 205%;
       left: 20%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
     }
     &::after {
       content: url("src/assets/star.png");
@@ -28,6 +33,8 @@ export const Wrapper = styled.div`
       top: 40%;
       left: 10%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
     }
   }
 
@@ -53,6 +60,7 @@ export const Wrapper = styled.div`
         height: 8.375rem;
         z-index: 1;
         transform: scale(0.6);
+        animation: none;
       }
 
       svg {

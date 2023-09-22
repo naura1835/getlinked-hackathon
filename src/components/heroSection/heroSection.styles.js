@@ -2,7 +2,7 @@ import { keyframes, styled } from "styled-components";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
 import { BodyIntroText, Heading1 } from "../../globalStyles/text.styles";
 
-const blink = keyframes`
+export const blink = keyframes`
     from{
         opacity: 0;
     }

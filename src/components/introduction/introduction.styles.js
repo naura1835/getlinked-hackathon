@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Heading2 } from "../../globalStyles/text.styles";
 import { SvgWrapper } from "../section/section.styles";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.div`
   ${Heading2} {
@@ -12,6 +13,8 @@ export const Wrapper = styled.div`
       top: 20%;
       right: 12%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 1s;
     }
 
     @media ${breakpointsUp["tablet-landscape-up"]} {
@@ -48,6 +51,8 @@ export const Wrapper = styled.div`
       top: 40%;
       left: 5%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 3s;
     }
 
     @media ${breakpointsUp["tablet-landscape-up"]} {

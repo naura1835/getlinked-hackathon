@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import gsap from "gsap";
+
 import Faq from "../../components/faqs/faqs.component";
 import Layout from "../../components/layout/layout.component";
 import Header from "../../components/header/header.component";
@@ -10,21 +13,26 @@ import TimeLine from "../../components/timeline/timeline.component";
 import Prizes from "../../components/prizes/prizes.component";
 import Partners from "../../components/partners/partners.component";
 import PrivacyTerms from "../../components/privacyTerms/privacyTerms.component";
-import gsap from "gsap";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { useEffect } from "react";
-import { animateSectionTitle } from "../../utils/animation";
+import {
+  animateSectionParagraph,
+  animateSectionTitle,
+} from "../../utils/animation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
   useEffect(() => {
-    const sections = gsap.utils.toArray(".title");
+    const titles = gsap.utils.toArray(".title");
+    const paragraphs = gsap.utils.toArray(".section-paragraph");
 
-    sections.forEach((elem) => {
-      animateSectionTitle(elem, true);
+    titles.forEach((elem) => {
+      animateSectionTitle(elem);
+    });
+    paragraphs.forEach((elem) => {
+      animateSectionParagraph(elem);
     });
   }, []);
   return (

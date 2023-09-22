@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { Logo } from "../../globalStyles/text.styles";
 
@@ -16,10 +16,12 @@ const Header = () => {
 
   return (
     <NavBar>
-      <Logo style={{ visibility: isOpen ? "hidden" : "visible" }}>
-        get
-        <span>Linked</span>
-      </Logo>
+      <Link to="/" style={{ color: "#fff" }}>
+        <Logo style={{ visibility: isOpen ? "hidden" : "visible" }}>
+          get
+          <span>Linked</span>
+        </Logo>
+      </Link>
       <MenuList $isOpen={isOpen}>
         <MenuListItem>
           <NavLink to="/">Timeline</NavLink>
@@ -34,12 +36,7 @@ const Header = () => {
           <NavLink to="/contact">Contact</NavLink>
         </MenuListItem>
         <MenuListItem>
-          <NavLink
-            className={({ isActive }) => isActive && "active--register"}
-            to="/register"
-          >
-            Register
-          </NavLink>
+          <NavLink to="/register">Register</NavLink>
         </MenuListItem>
       </MenuList>
       <MenuIcon

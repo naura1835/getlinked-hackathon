@@ -22,19 +22,19 @@ export const animateSectionTitle = (classname) => {
     scrollTrigger: {
       trigger: classname,
       start: "top center+=100",
-      // markers: true,
     },
     yPercent: 130,
     autoAlpha: 0,
-    stagger: 0.05,
+    stagger: 0.1,
     ease: Power4.easeOut,
     duration: 1,
     delay: 0.2,
   });
 };
 
+// herosection paragraph animation
 export const animateParagraph = (paragraph) => {
-  return gsap.fromTo(
+  return gsap.from(
     paragraph,
     {
       autoAlpha: 0,
@@ -45,4 +45,22 @@ export const animateParagraph = (paragraph) => {
       y: 0,
     }
   );
+};
+
+export const animateSectionParagraph = (paragraph) => {
+  let string = new SplitType(paragraph, { types: "lines" });
+  let stringLines = string.lines;
+
+  gsap.from(stringLines, {
+    scrollTrigger: {
+      trigger: paragraph,
+      start: "top center+=100",
+    },
+    autoAlpha: 0,
+    y: 60,
+    stagger: 0.15,
+    ease: Power4.easeOut,
+    duration: 1,
+    delay: 0.2,
+  });
 };

@@ -8,6 +8,7 @@ import {
 } from "../../globalStyles/text.styles";
 import { DescriptionWrapper, SvgWrapper } from "../section/section.styles";
 import { GlassWrapper } from "../../globalStyles/global.styles";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -24,6 +25,8 @@ export const Wrapper = styled.div`
       top: -55%;
       right: 18%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 3s;
     }
   }
 
@@ -53,6 +56,8 @@ export const Wrapper = styled.div`
       top: 10%;
       left: 5%;
       transform: scale(var(--scale-lg-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 1s;
     }
 
     > svg {
@@ -75,6 +80,8 @@ export const Wrapper = styled.div`
       top: 25%;
       right: 5%;
       transform: scale(var(--scale-lg-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 3s;
     }
 
     &::after {
@@ -83,6 +90,8 @@ export const Wrapper = styled.div`
       bottom: 20%;
       left: -15%;
       transform: scale(var(--scale-lg-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
     }
 
     ${SmallMediumText} {
@@ -120,6 +129,8 @@ export const Wrapper = styled.div`
         top: 70%;
         right: -115%;
         transform: scale(var(--scale-lg-global));
+        animation: ${blink} 2s infinite;
+        animation-delay: 3s;
       }
     }
 
@@ -192,6 +203,8 @@ export const PolicyWrapper = styled(GlassWrapper)`
     bottom: -23%;
     right: 23%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 3s;
   }
 
   ${SmallMediumText} {
