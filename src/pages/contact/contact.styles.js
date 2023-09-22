@@ -79,6 +79,13 @@ export const ContactWrapper = styled.form`
     margin-top: 1.94rem;
     align-self: center;
   }
+
+  @media ${breakpointsUp["tablet-landscape-up"]} {
+    ${CustomInputBar} {
+      width: 27.3125rem;
+      height: 2.9375rem;
+    }
+  }
 `;
 
 export const ContactInfo = styled.section`

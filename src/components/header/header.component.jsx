@@ -34,7 +34,12 @@ const Header = () => {
           <NavLink to="/contact">Contact</NavLink>
         </MenuListItem>
         <MenuListItem>
-          <NavLink to="/register">Register</NavLink>
+          <NavLink
+            className={({ isActive }) => isActive && "active--register"}
+            to="/register"
+          >
+            Register
+          </NavLink>
         </MenuListItem>
       </MenuList>
       <MenuIcon

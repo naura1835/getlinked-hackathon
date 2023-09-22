@@ -8,12 +8,13 @@ export const CustomInput = ({
   type,
   placeholder,
   value,
+  labelText,
   handleChange,
   // hasError,
 }) => {
   return (
-    <>
-      {label && <CustomLabel htmlFor={label}>{name}</CustomLabel>}
+    <div>
+      {labelText && <CustomLabel htmlFor={label}>{labelText}</CustomLabel>}
       <CustomInputBar>
         <input
           id={label}
@@ -25,24 +26,37 @@ export const CustomInput = ({
           required
         />
       </CustomInputBar>
-    </>
+    </div>
   );
 };
 
-export const CustomSelect = ({ label, name, placeholder, options }) => {
+export const CustomSelect = ({
+  label,
+  labelText,
+  name,
+  placeholder,
+  optionsArray,
+  handleChange,
+}) => {
   return (
-    <>
-      <CustomLabel>{label}</CustomLabel>
+    <div>
+      <CustomLabel htmlFor={label}>{labelText}</CustomLabel>
       <CustomSelectWrapper>
-        <select id={label} name={name} placeholder={placeholder}>
-          {options.map((opt, index) => (
-            <option key={index} value={opt.value}>
-              {opt.value}
-            </option>
-          ))}
+        <select
+          id={label}
+          name={name}
+          placeholder={placeholder}
+          onChange={handleChange}
+        >
+          {optionsArray &&
+            optionsArray.map((opt) => (
+              <option key={opt.id} value={opt.id || opt}>
+                {opt.name || opt}
+              </option>
+            ))}
         </select>
       </CustomSelectWrapper>
-    </>
+    </div>
   );
 };
 
@@ -63,6 +77,15 @@ export const CustomTextarea = ({
         required
       ></textarea>
     </CustomTextareWrapper>
+  );
+};
+
+export const CustomCheckBox = ({ labelText, name, handleChange }) => {
+  return (
+    <CheckboxWrapper>
+      <input type="checkbox" name={name} onChange={handleChange} />
+      <span>{labelText}</span>
+    </CheckboxWrapper>
   );
 };
 
@@ -96,6 +119,44 @@ export const CustomLabel = styled.label`
   margin-bottom: 0.94rem;
 `;
 
+export const CheckboxWrapper = styled(CustomLabel)`
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+
+  & > input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    margin-right: 1rem;
+    font: inherit;
+    color: #fff;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 0.125rem;
+    border: 1px solid #fff;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em #ff26b9;
+      background-color: CanvasText;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+  }
+`;
+
 export const CustomInputBar = styled.div`
   display: grid;
   place-items: center;
@@ -120,9 +181,14 @@ export const CustomInputBar = styled.div`
   }
 
   @media ${breakpointsUp["tablet-portrait-up"]} {
-    width: 27.3125rem;
+    max-width: 27.3125rem;
+    width: 100%;
     height: 2.9375rem;
   }
+  /* @media ${breakpointsUp["desktop-up"]} {
+    width: 27.3125rem;
+    height: 2.9375rem;
+  } */
 `;
 
 export const CustomSelectWrapper = styled.div`

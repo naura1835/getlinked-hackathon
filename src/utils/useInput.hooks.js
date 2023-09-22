@@ -7,6 +7,12 @@ const useInput = (initialValue) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
+    if (event.target.type == "checkbox") {
+      return setFormValue((prev) => ({
+        ...prev,
+        [name]: event.target.checked,
+      }));
+    }
     setFormValue((prev) => ({ ...prev, [name]: value }));
   };
 

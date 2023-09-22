@@ -67,6 +67,11 @@ export const MenuListItem = styled.li`
     }
   }
 
+  > .active--register {
+    background-color: transparent;
+    border: 1px solid ${({ theme }) => theme.colors.linearGradient};
+  }
+
   a {
     color: #fff;
     font-family: "Inter";
