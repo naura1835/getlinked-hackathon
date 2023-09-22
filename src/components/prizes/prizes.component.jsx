@@ -14,6 +14,7 @@ import {
   MediumText,
 } from "../../globalStyles/text.styles";
 
+// eslint-disable-next-line react/prop-types
 const Prizes = ({ className }) => {
   return (
     <Wrapper>

@@ -96,6 +96,17 @@ export const SmallMediumText = styled.p`
   }
 `;
 
+export const CaptionText = styled.p`
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: center;
+
+  @media ${breakpointsUp["tablet-portrait-up"]} {
+    font-size: 1rem;
+    text-align: start;
+  }
+`;
+
 export const HighLightText = styled.span`
   color: ${(props) => props.theme.colors.phlox};
 `;

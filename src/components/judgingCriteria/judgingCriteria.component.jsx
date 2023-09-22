@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import CustomButton from "../../components/customButton/customButton.components";
 import { HighLightText } from "../../globalStyles/text.styles";
 import Section from "../section/section.component";

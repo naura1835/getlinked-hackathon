@@ -13,6 +13,7 @@ import {
 import { SmallMediumText } from "../../globalStyles/text.styles";
 import CustomButton from "../customButton/customButton.components";
 
+// eslint-disable-next-line react/prop-types
 const PrivacyTerms = ({ className }) => {
   return (
     <Wrapper>

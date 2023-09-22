@@ -46,3 +46,15 @@ code {
   font-family: "Montserrat";
   font-size: 0.875rem;
 }
+
+input,
+textarea {
+  color: #fff;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 30px #150e28 inset !important;
+}

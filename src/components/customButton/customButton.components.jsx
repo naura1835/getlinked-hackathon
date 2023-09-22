@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import { Wrapper } from "./customButton.styles";
+import { SubmitButton, Wrapper } from "./customButton.styles";
 
 const CustomButton = ({ className, text }) => {
   return (
@@ -8,6 +8,10 @@ const CustomButton = ({ className, text }) => {
       <Link to="/">{text}</Link>
     </Wrapper>
   );
+};
+
+export const CustomSubmitButton = ({ text, type }) => {
+  return <SubmitButton type={type}>{text}</SubmitButton>;
 };
 
 export default CustomButton;

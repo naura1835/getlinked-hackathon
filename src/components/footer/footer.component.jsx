@@ -41,7 +41,9 @@ const Footer = () => {
           <FooterListItem>FAQs</FooterListItem>
           <FooterListItem>Register</FooterListItem>
           <FooterListItem>
-            <HighLightText>Follow us</HighLightText>
+            <HighLightText style={{ fontSize: "0.75rem" }}>
+              Follow us
+            </HighLightText>
             <Instagram />
             <X />
             <Facebook />

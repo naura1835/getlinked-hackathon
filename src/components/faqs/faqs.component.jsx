@@ -5,6 +5,7 @@ import ManThinking from "../../assets/svgs/man-thinking.svg?react";
 import { HighLightText, MediumText } from "../../globalStyles/text.styles";
 import { FaqWrapper, FaqItem, Wrapper, InnerWrapper } from "./faqs.styles";
 
+// eslint-disable-next-line react/prop-types
 const Faq = ({ className }) => {
   return (
     <Wrapper>
