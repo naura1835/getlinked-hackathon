@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Section from "../section/section.component";
 
 import Lighbulb from "../../assets/svgs/the-big-idea.svg?react";
@@ -5,13 +6,14 @@ import Lighbulb from "../../assets/svgs/the-big-idea.svg?react";
 import { MediumText } from "../../globalStyles/text.styles";
 import { Wrapper } from "./introduction.styles";
 
-const Introduction = () => {
+const Introduction = ({ className }) => {
   return (
     <Wrapper>
       <Section
         title="Introduction to getlinked "
         subtitle="tech Hackathon 1.0"
         component={<Lighbulb />}
+        titleClassName={className}
       >
         <MediumText>
           Our tech hackathon is a melting pot of visionaries, and its purpose is

@@ -14,11 +14,11 @@ import {
   MediumText,
 } from "../../globalStyles/text.styles";
 
-const Prizes = () => {
+const Prizes = ({ className }) => {
   return (
     <Wrapper>
       <DescriptionWrapper>
-        <Heading2>
+        <Heading2 className={className}>
           Prizes <HighLightText>and Rewards</HighLightText>
         </Heading2>
         <MediumText>

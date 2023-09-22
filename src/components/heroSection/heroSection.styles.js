@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
   row-gap: 2rem;
   padding: 1.875rem 0 0;
   box-shadow: ${({ theme }) => theme.boxShadow};
+  visibility: hidden;
 
   ${BodyIntroText} {
     margin-inline: auto;
@@ -230,6 +231,7 @@ export const ImageWrapper = styled.div`
     object-fit: cover;
 
     &:first-child {
+      transform: translateY(20px) scale(0);
       mix-blend-mode: luminosity;
       background-color: lightgray 50%;
       background-blend-mode: luminosity;

@@ -11,13 +11,14 @@ import {
   Wrapper,
 } from "./judgingCriteria.styles";
 
-const JudgingCriteria = () => {
+const JudgingCriteria = ({ className }) => {
   return (
     <Wrapper>
       <Section
         title="Judging Criteria "
         subtitle="Key attributes"
         component={<LookingAtChart />}
+        titleClassName={className}
       >
         <JudgingCriteriaWrapper>
           <ParagraphList>

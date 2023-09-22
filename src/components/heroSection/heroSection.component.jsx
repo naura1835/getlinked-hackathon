@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/all";
 
@@ -19,6 +18,7 @@ import {
   ImageWrapper,
   Wrapper,
 } from "./heroSection.styles";
+import { useEffect } from "react";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper className="hero-section">
       <BodyIntroText className="typewriter"></BodyIntroText>
       <DescriptionWrapper className="description-section">
         <Heading1 className="getlinked">

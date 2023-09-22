@@ -13,13 +13,14 @@ import {
 import { SmallMediumText } from "../../globalStyles/text.styles";
 import CustomButton from "../customButton/customButton.components";
 
-const PrivacyTerms = () => {
+const PrivacyTerms = ({ className }) => {
   return (
     <Wrapper>
       <Section
         title="Privacy Policy and "
         subtitle="Terms"
         component={<Lock />}
+        titleClassName={className}
       >
         <SmallMediumText>Last updated on September 12, 2023</SmallMediumText>
         <SmallMediumText>

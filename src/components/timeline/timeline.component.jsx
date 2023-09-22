@@ -13,10 +13,10 @@ import {
   Wrapper,
 } from "./timeline.styles";
 
-const TimeLine = () => {
+const TimeLine = ({ className }) => {
   return (
     <Wrapper>
-      <Heading2>Timeline</Heading2>
+      <Heading2 className={className}>Timeline</Heading2>
       <SmallMediumText>
         Here is the breakdown of the time we anticipate using for the upcoming
         event.

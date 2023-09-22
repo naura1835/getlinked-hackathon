@@ -5,15 +5,14 @@ import ManThinking from "../../assets/svgs/man-thinking.svg?react";
 import { HighLightText, MediumText } from "../../globalStyles/text.styles";
 import { FaqWrapper, FaqItem, Wrapper, InnerWrapper } from "./faqs.styles";
 
-const Faq = () => {
+const Faq = ({ className }) => {
   return (
     <Wrapper>
       <Section
         component={<ManThinking />}
         title="Frequently Ask "
         subtitle="Question"
-        svgClassName="faqs"
-        headerClassName="faqs--title"
+        titleClassName={className}
       >
         <InnerWrapper>
           <MediumText>

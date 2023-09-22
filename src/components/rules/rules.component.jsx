@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Section from "../section/section.component";
 
 import WomanSitting from "../../assets/svgs/woman-sitting.svg?react";
@@ -5,7 +6,7 @@ import WomanSitting from "../../assets/svgs/woman-sitting.svg?react";
 import { MediumText } from "../../globalStyles/text.styles";
 import { Wrapper } from "./rules.styles";
 
-const Rules = () => {
+const Rules = ({ className }) => {
   return (
     <Wrapper>
       <Section
@@ -13,6 +14,7 @@ const Rules = () => {
         subtitle="and Guidelines"
         component={<WomanSitting />}
         direction="row-reverse"
+        titleClassName={className}
       >
         <MediumText>
           Our tech hackathon is a melting pot of visionaries, and its purpose is

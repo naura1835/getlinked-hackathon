@@ -1,9 +1,11 @@
 import gsap from "gsap";
-import SplitType from "split-type";
 
 import { animateParagraph, animateTitle } from "../../utils/animation";
 
 export const animateHeroSection = () => {
+  gsap.set(".hero-section", {
+    visibility: "visible",
+  });
   gsap.set(".man-wearing-glasses", {
     scale: 0,
     y: 20,
@@ -14,14 +16,6 @@ export const animateHeroSection = () => {
   });
 
   let masterTl = gsap.timeline({ delay: 0.5 });
-
-  let getLinked = new SplitType(".getlinked", { types: "chars" });
-  let getLinkedChars = getLinked.chars;
-
-  let hackathonVerString = new SplitType(".hackathon-version", {
-    types: "chars",
-  });
-  let hackathonVerChars = hackathonVerString.chars;
 
   ["Igniting a Revolution in HR Innovation"].forEach((word) => {
     let tl = gsap.timeline();
@@ -44,7 +38,7 @@ export const animateHeroSection = () => {
     3
   );
 
-  masterTl.add(animateTitle(getLinkedChars), 3);
+  masterTl.add(animateTitle(".getlinked"), 3);
   masterTl.to(
     ".getlinked",
     {
@@ -52,7 +46,7 @@ export const animateHeroSection = () => {
     },
     4
   );
-  masterTl.add(animateTitle(hackathonVerChars), 3);
+  masterTl.add(animateTitle(".hackathon-version"), 3);
   masterTl.to(
     ".hackathon-version",
     {

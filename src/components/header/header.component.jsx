@@ -31,10 +31,10 @@ const Header = () => {
           <NavLink to="/">FAQs</NavLink>
         </MenuListItem>
         <MenuListItem>
-          <NavLink to="/">Contact</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </MenuListItem>
         <MenuListItem>
-          <NavLink to="/">Register</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </MenuListItem>
       </MenuList>
       <MenuIcon

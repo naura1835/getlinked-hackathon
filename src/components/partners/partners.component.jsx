@@ -8,10 +8,10 @@ import Wisper from "../../assets/wisper-logo-white.png";
 import { Heading2, MediumText } from "../../globalStyles/text.styles";
 import { Partner, PartnerGrid, Wrapper } from "./partners.styles";
 
-const Partners = () => {
+const Partners = ({ className }) => {
   return (
     <Wrapper>
-      <Heading2>Partners and Sponsors</Heading2>
+      <Heading2 className={className}>Partners and Sponsors</Heading2>
       <MediumText>
         Getlinked Hackathon 1.0 is honored to have the following major companies
         as its partners and sponsors
