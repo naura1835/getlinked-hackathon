@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     margin-top: 3.75rem;
 
     &::before {
-      content: url("src/assets/purple-star.png");
+      content: url("./assets/purple-star.png");
       position: absolute;
       top: -75%;
       left: 12%;
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
     }
 
     &::before {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       bottom: -5%;
       right: 23%;
