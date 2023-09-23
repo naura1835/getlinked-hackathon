@@ -4,6 +4,8 @@ import Header from "../../components/header/header.component";
 
 import ManSitting from "../../assets/svgs/man-sitting.svg?react";
 import PeopleWalking from "../../assets/svgs/people-walking.svg?react";
+import LadyHappy from "../../assets/success.png";
+import Wink from "../../assets/wink.png";
 
 import {
   CaptionText,
@@ -113,14 +115,14 @@ const Register = () => {
       {isOpen && (
         <OverlayWrapper>
           <SuccessWrapper>
-            <img src="src/assets/success.png" alt="woman excited" />
+            <img src={LadyHappy} alt="woman excited" />
             <BodyIntroText>
               Congratulations you have successfully Registered!
             </BodyIntroText>
             <SmallMediumText>
               Yes, it was easy and you did it! check your mail box for next step
               <img
-                src="src/assets/wink.png"
+                src={Wink}
                 alt="wink emoji"
                 style={{ height: "18px", width: "18px" }}
               />
