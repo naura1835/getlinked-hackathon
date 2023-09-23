@@ -10,6 +10,10 @@ export const animateHeroSection = () => {
     scale: 0,
     y: 20,
   });
+  gsap.set(".description", {
+    autoAlpha: 0,
+    y: 12,
+  });
 
   gsap.set(".blue-flare", {
     scale: 0,
@@ -101,9 +105,3 @@ export const animateHeroSection = () => {
       "sync-with-blue-flare"
     );
 };
-
-// const starAnimation = () => {
-//   //stars
-//   // let stars = [...stars]
-//   [".typewriter", ".description-section"].forEach;
-// };

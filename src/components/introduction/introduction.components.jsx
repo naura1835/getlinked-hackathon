@@ -9,12 +9,14 @@ import { Wrapper } from "./introduction.styles";
 import { useEffect } from "react";
 
 import gsap, { Power4 } from "gsap";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const Introduction = ({ className }) => {
   useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-paragraph",
+        trigger: ".be-creative",
         start: "top center+=100",
       },
       delay: 0.3,
@@ -60,6 +62,7 @@ const Introduction = ({ className }) => {
         title="Introduction to getlinked "
         subtitle="tech Hackathon 1.0"
         component={<Lighbulb />}
+        svgClassName="be-creative"
         titleClassName={className}
       >
         <MediumText className="section-paragraph">

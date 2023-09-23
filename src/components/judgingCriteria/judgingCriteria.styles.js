@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
 import { Heading2, HighLightText } from "../../globalStyles/text.styles";
 import { SvgWrapper } from "../section/section.styles";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.div`
   ${Heading2} {
@@ -14,6 +15,8 @@ export const Wrapper = styled.div`
       top: -250%;
       right: 40%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
     }
 
     @media ${breakpointsUp["tablet-portrait-up"]} {
@@ -40,6 +43,8 @@ export const Wrapper = styled.div`
       top: -20%;
       left: 40%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 1s;
     }
 
     @media ${breakpointsUp["tablet-portrait-up"]} {
@@ -94,6 +99,8 @@ export const JudgingCriteriaWrapper = styled.div`
     bottom: 0;
     right: 10%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 2s;
   }
 
   @media ${breakpointsUp["tablet-landscape-up"]} {

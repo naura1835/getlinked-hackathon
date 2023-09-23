@@ -6,6 +6,7 @@ import {
   SmallMediumText,
 } from "../../globalStyles/text.styles";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.section`
   margin-top: 5rem;
@@ -30,6 +31,8 @@ export const Wrapper = styled.section`
       bottom: -140%;
       left: -30%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
     }
   }
 
@@ -65,6 +68,8 @@ export const TimeLineContainer = styled.ol`
     bottom: -9%;
     left: -13%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 3s;
   }
 
   &::after {
@@ -73,6 +78,8 @@ export const TimeLineContainer = styled.ol`
     top: 45%;
     right: 13%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 3s;
   }
 
   @media ${breakpointsUp["tablet-portrait-up"]} {

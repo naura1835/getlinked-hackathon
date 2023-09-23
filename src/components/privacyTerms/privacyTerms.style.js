@@ -44,10 +44,10 @@ export const Wrapper = styled.div`
       top: 0;
       right: 0;
       left: 0;
-      transform: translate(25%, 0);
+      transform: scale(var(--sheild-scale)) translate(25%, 0);
       width: 15.5625rem;
       height: 19.4375rem;
-      z-index: -1;
+      visibility: var(--sheild-visibility);
     }
 
     &::after {
@@ -62,6 +62,12 @@ export const Wrapper = styled.div`
 
     > svg {
       margin-top: 20%;
+
+      #star {
+        transform: scale(var(--scale-global));
+        animation: ${blink} 2s infinite;
+        animation-delay: 1s;
+      }
 
       > g > #pink-star {
         display: none;
@@ -147,6 +153,9 @@ export const Wrapper = styled.div`
 
         > g > #pink-star {
           display: block;
+          transform: scale(var(--scale-global));
+          animation: ${blink} 2s infinite;
+          animation-delay: 2s;
         }
       }
     }

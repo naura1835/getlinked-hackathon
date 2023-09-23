@@ -59,7 +59,7 @@ export const Wrapper = styled.div`
         width: 8.375rem;
         height: 8.375rem;
         z-index: 1;
-        transform: scale(0.6);
+        transform: scale(var(--scale-ellipse));
         animation: none;
       }
 
@@ -72,7 +72,7 @@ export const Wrapper = styled.div`
   @media ${breakpointsUp["desktop-up"]} {
     ${SvgWrapper} {
       &::before {
-        transform: scale(0.8);
+        transform: scale(var(--scale-ellipse)); //0.8
         left: 55%;
         top: 10%;
       }

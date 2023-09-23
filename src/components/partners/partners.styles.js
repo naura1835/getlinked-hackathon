@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
 import { MediumText } from "../../globalStyles/text.styles";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -21,6 +22,8 @@ export const Wrapper = styled.div`
         top: 250%;
         right: 35%;
         transform: scale(var(--scale-global));
+        animation: ${blink} 2s infinite;
+        animation-delay: 3s;
       }
     }
   }
@@ -56,6 +59,8 @@ export const PartnerGrid = styled.div`
     top: -5%;
     left: 5%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 2s;
   }
   &::after {
     content: url("src/assets/star.png");
@@ -63,6 +68,8 @@ export const PartnerGrid = styled.div`
     bottom: 0;
     right: 10%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 3s;
   }
 
   @media ${breakpointsUp["tablet-portrait-up"]} {

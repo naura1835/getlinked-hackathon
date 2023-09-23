@@ -4,6 +4,7 @@ import { HighLightText, SmallMediumText } from "../../globalStyles/text.styles";
 import { DescriptionWrapper, SvgWrapper } from "../section/section.styles";
 import { SectionWrapper } from "../../globalStyles/global.styles";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled(SectionWrapper)`
   ${SvgWrapper} {
@@ -15,6 +16,8 @@ export const Wrapper = styled(SectionWrapper)`
       bottom: -10%;
       left: 10%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
     }
 
     &::after {
@@ -23,6 +26,8 @@ export const Wrapper = styled(SectionWrapper)`
       bottom: -30%;
       right: 10%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 1s;
     }
   }
 
@@ -36,6 +41,8 @@ export const Wrapper = styled(SectionWrapper)`
       top: -25%;
       left: 10%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 3s;
     }
 
     &::after {
@@ -44,6 +51,8 @@ export const Wrapper = styled(SectionWrapper)`
       top: 20%;
       right: 20%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 3s;
     }
   }
 
@@ -114,6 +123,8 @@ export const AwardDiv = styled.div`
     bottom: -45%;
     right: 30%;
     transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 2s;
   }
 
   @media ${breakpointsUp["tablet-portrait-up"]} {
@@ -129,6 +140,8 @@ export const AwardDiv = styled.div`
       top: -40%;
       right: -10%;
       transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 3s;
     }
   }
 

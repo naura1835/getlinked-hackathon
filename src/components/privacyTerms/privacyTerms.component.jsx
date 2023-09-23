@@ -1,7 +1,7 @@
 import Section from "../section/section.component";
 
 import Lock from "../../assets/svgs/lock.svg?react";
-// import LockBg from "../../assets/svgs/logo-bg.svg?react";
+
 import {
   Policy,
   PolicyList,
@@ -12,21 +12,56 @@ import {
 } from "./privacyTerms.style";
 import { SmallMediumText } from "../../globalStyles/text.styles";
 import CustomButton from "../customButton/customButton.components";
+import { useEffect } from "react";
+import gsap, { Power3 } from "gsap";
 
 // eslint-disable-next-line react/prop-types
 const PrivacyTerms = ({ className }) => {
+  useEffect(() => {
+    gsap.set("html", {
+      "--sheild-visibility": "hidden",
+      "--sheild-scale": 0,
+    });
+    gsap.set(".sub-title", { y: 20, autoAlpha: 0 });
+
+    gsap.to(".sub-title", {
+      scrollTrigger: {
+        trigger: ".sub-title",
+        start: "top center",
+      },
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.3,
+      ease: Power3.easeInOut,
+      delay: 0.2,
+    });
+    gsap.to("html", {
+      scrollTrigger: {
+        trigger: ".man-standing-on-lock",
+        start: "top center",
+      },
+      "--sheild-visibility": "visible",
+      "--sheild-scale": 1,
+      ease: Power3.easeIn,
+      delay: 0.2,
+      duration: 2,
+    });
+  });
   return (
     <Wrapper>
       <Section
         title="Privacy Policy and "
         subtitle="Terms"
         component={<Lock />}
+        svgClassName="man-standing-on-lock"
         titleClassName={className}
       >
-        <SmallMediumText>Last updated on September 12, 2023</SmallMediumText>
-        <SmallMediumText>
-          Below are our privacy & policy, which outline a lot of goodies. it’s
-          our aim to always take of our participant
+        <SmallMediumText className="sub-title">
+          Last updated on September 12, 2023
+        </SmallMediumText>
+        <SmallMediumText className="sub-title">
+          Below are our privacy & policy, which outline a lot of goodies.
+          it&apos;s our aim to always take of our participant
         </SmallMediumText>
         <PolicyWrapper>
           <SmallMediumText>

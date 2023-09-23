@@ -1,4 +1,4 @@
-import gsap, { Back, Power4 } from "gsap";
+import gsap, { Back, Power4, Sine } from "gsap";
 import SplitType from "split-type";
 
 export const animateTitle = (classname) => {
@@ -34,17 +34,10 @@ export const animateSectionTitle = (classname) => {
 
 // herosection paragraph animation
 export const animateParagraph = (paragraph) => {
-  return gsap.from(
-    paragraph,
-    {
-      autoAlpha: 0,
-      y: 12,
-    },
-    {
-      autoAlpha: 1,
-      y: 0,
-    }
-  );
+  return gsap.to(paragraph, {
+    autoAlpha: 1,
+    y: 0,
+  });
 };
 
 export const animateSectionParagraph = (paragraph) => {
@@ -62,5 +55,15 @@ export const animateSectionParagraph = (paragraph) => {
     ease: Power4.easeOut,
     duration: 1,
     delay: 0.2,
+  });
+};
+
+export const float = (classname) => {
+  return gsap.to(classname, {
+    y: 30,
+    repeat: -1,
+    yoyo: true,
+    ease: Sine.easeInOut,
+    duration: 1,
   });
 };

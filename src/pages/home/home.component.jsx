@@ -37,8 +37,10 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <Header />
-      <HeroSection />
+      <Layout className="header-herosection">
+        <Header />
+        <HeroSection />
+      </Layout>
       <Layout className="layout">
         <Introduction className="title" />
         <Rules className="title" />
@@ -48,8 +50,8 @@ const HomePage = () => {
         <Prizes className="title" />
         <Partners className="title" />
         <PrivacyTerms className="title" />
+        <Footer />
       </Layout>
-      <Footer />
     </>
   );
 };
