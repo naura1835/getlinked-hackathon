@@ -30,7 +30,7 @@ export const FooterSection = styled.div`
 
   &:nth-child(1) {
     &::after {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       top: 50%;
       left: -17%;
@@ -42,7 +42,7 @@ export const FooterSection = styled.div`
 
   &:nth-child(2) {
     &::after {
-      content: url("src/assets/grey-star.png");
+      content: url("./assets/grey-star.png");
       position: absolute;
       top: 40%;
       right: 25%;
@@ -54,7 +54,7 @@ export const FooterSection = styled.div`
 
   &:nth-child(3) {
     &::after {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       top: 40%;
       right: 5%;
@@ -69,7 +69,7 @@ export const FooterSection = styled.div`
     justify-content: center;
 
     &::after {
-      content: url("src/assets/pink-star.png");
+      content: url("./assets/pink-star.png");
       position: absolute;
       top: 0%;
       left: 10%;

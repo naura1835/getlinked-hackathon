@@ -11,7 +11,7 @@ export const Wrapper = styled(SectionWrapper)`
     margin-bottom: 3rem;
 
     &::before {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       bottom: -10%;
       left: 10%;
@@ -21,7 +21,7 @@ export const Wrapper = styled(SectionWrapper)`
     }
 
     &::after {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       bottom: -30%;
       right: 10%;
@@ -36,7 +36,7 @@ export const Wrapper = styled(SectionWrapper)`
     position: relative;
 
     &::before {
-      content: url("src/assets/purple-star.png");
+      content: url("./assets/purple-star.png");
       position: absolute;
       top: -25%;
       left: 10%;
@@ -46,7 +46,7 @@ export const Wrapper = styled(SectionWrapper)`
     }
 
     &::after {
-      content: url("src/assets/pink-star.png");
+      content: url("./assets/pink-star.png");
       position: absolute;
       top: 20%;
       right: 20%;
@@ -118,7 +118,7 @@ export const AwardDiv = styled.div`
   position: relative;
 
   &::before {
-    content: url("src/assets/grey-star.png");
+    content: url("./assets/grey-star.png");
     position: absolute;
     bottom: -45%;
     right: 30%;
@@ -135,7 +135,7 @@ export const AwardDiv = styled.div`
     }
 
     &::after {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       top: -40%;
       right: -10%;

@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
     --scale-star: 0;
 
     &::before {
-      content: url("src/assets/grey-star.png");
+      content: url("./assets/grey-star.png");
       position: absolute;
       bottom: -223%;
       right: 5%;
@@ -41,7 +41,7 @@ export const Wrapper = styled.div`
     }
 
     &::after {
-      content: url("src/assets/purple-line.png");
+      content: url("./assets/purple-line.png");
       position: absolute;
       right: 0;
       bottom: -20px;
@@ -54,7 +54,7 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, auto);
     row-gap: 4rem; //4.75rem
-    background: url("src/assets/metrix.png") no-repeat;
+    background: url("./assets/metrix.png") no-repeat;
     background-size: 80%;
     background-position: right;
 
@@ -89,22 +89,20 @@ export const DescriptionWrapper = styled.div`
   --scale-star-2: 0;
 
   &::before {
-    content: url("src/assets/star.png");
+    content: url("./assets/star.png");
     position: absolute;
     top: -10%;
     left: 32%;
-    /* transform: scale(0.5); */
     transform: scale(var(--scale-star-1));
     animation: ${blink} 2s infinite;
     animation-delay: 2s;
   }
 
   &::after {
-    content: url("src/assets/grey-star.png");
+    content: url("./assets/grey-star.png");
     position: absolute;
     bottom: 40%;
     right: 23%;
-    /* transform: scale(0.4); */
     transform: scale(var(--scale-star-2));
     animation: ${blink} 2s infinite;
     animation-delay: 5s;
@@ -118,7 +116,7 @@ export const DescriptionWrapper = styled.div`
   }
 
   ${Heading1}:nth-child(1)::before {
-    content: url("src/assets/Creative.png");
+    content: url("./assets/Creative.png");
     transform: scale(var(--scale-bulb));
     position: absolute;
     right: 10%;
@@ -152,7 +150,6 @@ export const DescriptionWrapper = styled.div`
     &::before {
       top: -30%;
       left: 15%;
-      /* transform: scale(1); */
       transform: scale(var(--scale-star-1));
     }
 

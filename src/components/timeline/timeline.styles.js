@@ -26,7 +26,7 @@ export const Wrapper = styled.section`
     width: 100%;
 
     &::after {
-      content: url("src/assets/purple-star.png");
+      content: url("./assets/purple-star.png");
       position: absolute;
       bottom: -140%;
       left: -30%;
@@ -63,7 +63,7 @@ export const TimeLineContainer = styled.ol`
   position: relative;
 
   &::before {
-    content: url("src/assets/grey-star.png");
+    content: url("./assets/grey-star.png");
     position: absolute;
     bottom: -9%;
     left: -13%;
@@ -73,7 +73,7 @@ export const TimeLineContainer = styled.ol`
   }
 
   &::after {
-    content: url("src/assets/star.png");
+    content: url("./assets/star.png");
     position: absolute;
     top: 45%;
     right: 13%;

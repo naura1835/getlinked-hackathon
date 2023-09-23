@@ -8,7 +8,7 @@ import { blink } from "../heroSection/heroSection.styles";
 export const Wrapper = styled.div`
   ${Heading2} {
     &::before {
-      content: url("src/assets/grey-star.png");
+      content: url("./assets/grey-star.png");
       position: absolute;
       top: 20%;
       right: 12%;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   }
   ${SvgWrapper} {
     &::before {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       top: 205%;
       left: 20%;
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
       animation-delay: 2s;
     }
     &::after {
-      content: url("src/assets/star.png");
+      content: url("./assets/star.png");
       position: absolute;
       top: 40%;
       left: 10%;
@@ -51,7 +51,7 @@ export const Wrapper = styled.div`
   @media ${breakpointsUp["tablet-landscape-up"]} {
     ${SvgWrapper} {
       &::before {
-        content: url("src/assets/Ellipse.png");
+        content: url("./assets/Ellipse.png");
         position: absolute;
         top: 5%;
         left: 52%;

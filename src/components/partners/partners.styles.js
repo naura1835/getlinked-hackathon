@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
       position: relative;
 
       &::before {
-        content: url("src/assets/pink-star.png");
+        content: url("./assets/pink-star.png");
         position: absolute;
         top: 250%;
         right: 35%;
@@ -54,7 +54,7 @@ export const PartnerGrid = styled.div`
   position: relative;
 
   &::before {
-    content: url("src/assets/purple-star.png");
+    content: url("./assets/purple-star.png");
     position: absolute;
     top: -5%;
     left: 5%;
@@ -63,7 +63,7 @@ export const PartnerGrid = styled.div`
     animation-delay: 2s;
   }
   &::after {
-    content: url("src/assets/star.png");
+    content: url("./assets/star.png");
     position: absolute;
     bottom: 0;
     right: 10%;

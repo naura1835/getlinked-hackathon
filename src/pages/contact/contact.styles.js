@@ -44,7 +44,7 @@ export const ContactForm = styled.div`
     position: relative;
 
     &::before {
-      content: url("src/assets/grey-star.png");
+      content: url("./assets/grey-star.png");
       position: absolute;
       top: 50%;
       right: 20%;
@@ -54,7 +54,7 @@ export const ContactForm = styled.div`
     }
 
     &::after {
-      content: url("src/assets/pink-star.png");
+      content: url("./assets/pink-star.png");
       position: absolute;
       top: -100%;
       left: 40%;
@@ -112,7 +112,7 @@ export const ContactWrapper = styled.form`
   position: relative;
 
   &::before {
-    content: url("src/assets/pink-star.png");
+    content: url("./assets/pink-star.png");
     position: absolute;
     bottom: 0%;
     left: -5%;
@@ -122,7 +122,7 @@ export const ContactWrapper = styled.form`
   }
 
   &::after {
-    content: url("src/assets/star.png");
+    content: url("./assets/star.png");
     position: absolute;
     bottom: 25%;
     right: -10%;

@@ -8,7 +8,7 @@ import { blink } from "../heroSection/heroSection.styles";
 export const Wrapper = styled.div`
   ${Heading2} {
     &::before {
-      content: url("src/assets/purple-star.png");
+      content: url("./assets/purple-star.png");
       position: absolute;
       top: 20%;
       right: 12%;
@@ -36,7 +36,7 @@ export const Wrapper = styled.div`
     margin-bottom: 3.6rem;
 
     &::before {
-      content: url("src/assets/arrow.png");
+      content: url("./assets/arrow.png");
       position: absolute;
       bottom: -13%;
       right: 53%;
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
     }
 
     &::after {
-      content: url("src/assets/purple-star.png");
+      content: url("./assets/purple-star.png");
       position: absolute;
       top: 40%;
       left: 5%;

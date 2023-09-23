@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     margin-bottom: 1rem;
 
     &::before {
-      content: url("src/assets/grey-star.png");
+      content: url("./assets/grey-star.png");
       position: absolute;
       top: -250%;
       right: 40%;
@@ -38,7 +38,7 @@ export const Wrapper = styled.div`
     margin-top: 4.62rem;
 
     &::after {
-      content: url("src/assets/purple-star.png");
+      content: url("./assets/purple-star.png");
       position: absolute;
       top: -20%;
       left: 40%;
@@ -55,7 +55,7 @@ export const Wrapper = styled.div`
       }
 
       &::before {
-        content: url("src/assets/Ellipse.png");
+        content: url("./assets/Ellipse.png");
         position: absolute;
         top: -20%;
         left: 12%;
@@ -94,7 +94,7 @@ export const JudgingCriteriaWrapper = styled.div`
   align-items: center;
 
   &::after {
-    content: url("src/assets/star.png");
+    content: url("./assets/star.png");
     position: absolute;
     bottom: 0;
     right: 10%;

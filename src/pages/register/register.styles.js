@@ -37,7 +37,7 @@ export const SVGWrapper = styled(SvgWrapper)`
   position: relative;
 
   &::before {
-    content: url("src/assets/pink-star.png");
+    content: url("./assets/pink-star.png");
     position: absolute;
     bottom: 50%;
     right: 10%;
@@ -47,7 +47,7 @@ export const SVGWrapper = styled(SvgWrapper)`
   }
 
   &::after {
-    content: url("src/assets/grey-star.png");
+    content: url("./assets/grey-star.png");
     position: absolute;
     bottom: -70%;
     left: 5%;
@@ -89,7 +89,7 @@ export const RegisterForm = styled(ContactWrapper)`
   position: relative;
 
   &::before {
-    content: url("src/assets/pink-star.png");
+    content: url("./assets/pink-star.png");
     position: absolute;
     bottom: 35%;
     right: 10%;
@@ -120,7 +120,7 @@ export const RegisterForm = styled(ContactWrapper)`
       position: relative;
 
       &::before {
-        content: url("src/assets/grey-star.png");
+        content: url("./assets/grey-star.png");
         position: absolute;
         top: -60%;
         right: -170%;
@@ -154,7 +154,7 @@ export const RegisterForm = styled(ContactWrapper)`
 
     ${SubmitButton} {
       &::after {
-        content: url("src/assets/star.png");
+        content: url("./assets/star.png");
         position: absolute;
         bottom: -10%;
         right: 10%;
@@ -215,7 +215,7 @@ export const SuccessWrapper = styled.div`
   position: relative;
 
   &::after {
-    content: url("src/assets/pink-star.png");
+    content: url("./assets/pink-star.png");
     position: absolute;
     top: -5%;
     right: 0%;
@@ -224,7 +224,7 @@ export const SuccessWrapper = styled.div`
     animation-delay: 2s;
   }
   &::before {
-    content: url("src/assets/pink-star.png");
+    content: url("./assets/pink-star.png");
     position: absolute;
     bottom: 4%;
     right: 5%;
@@ -237,7 +237,7 @@ export const SuccessWrapper = styled.div`
     position: relative;
 
     &::after {
-      content: url("src/assets/grey-star.png");
+      content: url("./assets/grey-star.png");
       position: absolute;
       top: -170%;
       left: 0%;
