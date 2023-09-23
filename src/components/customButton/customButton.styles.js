@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
   border-radius: 0.25rem;
   background: ${({ theme }) => theme.colors.linearGradient};
   display: grid;
@@ -11,6 +13,10 @@ export const Wrapper = styled.div`
 
   a {
     color: #fff;
+  }
+
+  &.back {
+    margin-inline: auto;
   }
 `;
 

@@ -16,7 +16,6 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/* <Header /> */}
         <Routes>
           <Route path="/" index element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />

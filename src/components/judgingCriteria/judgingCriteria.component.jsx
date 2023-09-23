@@ -12,9 +12,25 @@ import {
   Wrapper,
 } from "./judgingCriteria.styles";
 import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const JudgingCriteria = ({ className }) => {
-  useEffect(() => {});
+  useEffect(() => {
+    gsap.set(".criteria", { x: 20, autoAlpha: 0 });
+    gsap.to(".criteria", {
+      scrollTrigger: {
+        trigger: ".criteria",
+        start: "top center",
+      },
+      stagger: 0.3,
+      x: 0,
+      autoAlpha: 1,
+      duration: 1,
+    });
+  });
   return (
     <Wrapper>
       <Section

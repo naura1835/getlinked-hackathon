@@ -5,6 +5,7 @@ import {
   MediumText,
 } from "../../globalStyles/text.styles";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
+import { blink } from "../heroSection/heroSection.styles";
 
 export const Wrapper = styled.footer`
   background: #100b20;
@@ -25,10 +26,57 @@ export const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
+
+  &:nth-child(1) {
+    &::after {
+      content: url("src/assets/star.png");
+      position: absolute;
+      top: 50%;
+      left: -17%;
+      transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      content: url("src/assets/grey-star.png");
+      position: absolute;
+      top: 40%;
+      right: 25%;
+      transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 1s;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      content: url("src/assets/star.png");
+      position: absolute;
+      top: 40%;
+      right: 5%;
+      transform: scale(var(--scale-sm-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
+    }
+  }
 
   &:last-child {
     display: flex;
     justify-content: center;
+
+    &::after {
+      content: url("src/assets/pink-star.png");
+      position: absolute;
+      top: 0%;
+      left: 10%;
+      transform: scale(var(--scale-sm-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
+    }
   }
 
   ${MediumText} {
@@ -41,10 +89,28 @@ export const FooterSection = styled.div`
   @media ${breakpointsUp["tablet-landscape-up"]} {
     margin: 0;
 
+    &:nth-child(2) {
+      &::after {
+        top: 20%;
+        right: 5%;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        top: 80%;
+        right: -30%;
+      }
+    }
+
     &:last-child {
       grid-template-rows: 2/3;
       grid-column: 1/4;
       justify-self: center;
+
+      &::after {
+        left: 50%;
+      }
     }
   }
 `;

@@ -54,7 +54,7 @@ export const MenuList = styled.ul`
 export const MenuListItem = styled.li`
   margin-bottom: 2rem;
 
-  &:last-child {
+  &:last-child > a {
     border-radius: 0.25rem;
     background: ${({ theme }) => theme.colors.linearGradient};
     display: grid;
@@ -67,11 +67,6 @@ export const MenuListItem = styled.li`
     }
   }
 
-  > .active--register {
-    background-color: transparent;
-    border: 1px solid ${({ theme }) => theme.colors.linearGradient};
-  }
-
   a {
     color: #fff;
     font-family: "Inter";
@@ -82,6 +77,25 @@ export const MenuListItem = styled.li`
 
   @media ${breakpointsUp["tablet-landscape-up"]} {
     margin-bottom: 0;
+
+    .is-active {
+      background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .is-active--register {
+      border-radius: 0.25rem;
+      border: 2px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(
+        to left,
+        #903aff 3.08%,
+        #ff26b9 93.85%
+      );
+      background: transparent !important;
+    }
   }
 `;
 

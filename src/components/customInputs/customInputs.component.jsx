@@ -49,8 +49,8 @@ export const CustomSelect = ({
           onChange={handleChange}
         >
           {optionsArray &&
-            optionsArray.map((opt) => (
-              <option key={opt.id} value={opt.id || opt}>
+            optionsArray.map((opt, index) => (
+              <option key={opt.id || index} value={opt.id || opt}>
                 {opt.name || opt}
               </option>
             ))}
@@ -185,10 +185,10 @@ export const CustomInputBar = styled.div`
     width: 100%;
     height: 2.9375rem;
   }
-  /* @media ${breakpointsUp["desktop-up"]} {
-    width: 27.3125rem;
+  @media ${breakpointsUp["tablet-landscape-up"]} {
+    max-width: 18.3125rem;
     height: 2.9375rem;
-  } */
+  }
 `;
 
 export const CustomSelectWrapper = styled.div`

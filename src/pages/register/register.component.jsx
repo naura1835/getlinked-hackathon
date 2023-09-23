@@ -8,16 +8,20 @@ import PeopleWalking from "../../assets/svgs/people-walking.svg?react";
 import {
   CaptionText,
   CategoryGroupSize,
+  OverlayWrapper,
   RegisterForm,
   RegisterHeader,
   SVGWrapper,
   SubTitle,
+  SuccessWrapper,
   Wrapper,
 } from "./register.styles";
 import {
+  BodyIntroText,
   Heading2,
   Heading3,
   HighLightText,
+  SmallMediumText,
 } from "../../globalStyles/text.styles";
 import {
   CustomCheckBox,
@@ -27,9 +31,9 @@ import {
 import useInput from "../../utils/useInput.hooks";
 import { CustomSubmitButton } from "../../components/customButton/customButton.components";
 import { ContactForm } from "../contact/contact.styles";
-
 const Register = () => {
   const [categories, setCategories] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   const { formValue, handleChange } = useInput({
     teamName: "",
     phoneNo: "",
@@ -92,7 +96,10 @@ const Register = () => {
 
     fetch("https://backend.getlinked.ai/hackathon/registration", requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        setIsOpen(true);
+      })
       .catch((error) => console.log("error", error));
   };
 
@@ -102,6 +109,29 @@ const Register = () => {
         <RegisterHeader>Register</RegisterHeader>
       ) : (
         <Header />
+      )}
+      {isOpen && (
+        <OverlayWrapper>
+          <SuccessWrapper>
+            <img src="src/assets/success.png" alt="woman excited" />
+            <BodyIntroText>
+              Congratulations you have successfully Registered!
+            </BodyIntroText>
+            <SmallMediumText>
+              Yes, it was easy and you did it! check your mail box for next step
+              <img
+                src="src/assets/wink.png"
+                alt="wink emoji"
+                style={{ height: "18px", width: "18px" }}
+              />
+            </SmallMediumText>
+            <CustomSubmitButton
+              type="button"
+              text="Back"
+              handleClick={() => setIsOpen(false)}
+            />
+          </SuccessWrapper>
+        </OverlayWrapper>
       )}
       <Wrapper>
         <SVGWrapper>

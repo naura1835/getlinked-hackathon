@@ -20,6 +20,7 @@ body,
   box-sizing: border-box;
 }
 html {
+  --scale-sm-global: 0.4;
   --scale-global: 0.4;
   --scale-lg-global: 0.6;
   --scale-ellipse: 0.6;
@@ -28,6 +29,7 @@ html {
 
   @media (min-width: 900px) {
     --scale-global: 0.6;
+    --scale-lg-global: 0.8;
   }
   @media (min-width: 1200px) {
     --scale-global: 1;

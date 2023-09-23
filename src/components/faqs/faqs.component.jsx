@@ -7,6 +7,9 @@ import { FaqWrapper, FaqItem, Wrapper, InnerWrapper } from "./faqs.styles";
 import { useEffect } from "react";
 import { float } from "../../utils/animation";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // eslint-disable-next-line react/prop-types
 const Faq = ({ className }) => {

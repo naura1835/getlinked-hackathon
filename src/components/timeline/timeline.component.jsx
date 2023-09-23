@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { timeline } from "./timeline.data.js";
 
 import {
@@ -12,12 +13,30 @@ import {
   TimeLineItem,
   Wrapper,
 } from "./timeline.styles";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TimeLine = ({ className }) => {
+  useEffect(() => {
+    gsap.set(".timeline-description", { y: 20, autoAlpha: 0 });
+
+    gsap.to(".timeline-description", {
+      scrollTrigger: {
+        trigger: ".timeline-description",
+        start: "top center+=100",
+      },
+      y: 0,
+      autoAlpha: 1,
+      delay: 0.2,
+    });
+  });
   return (
     <Wrapper>
       <Heading2 className={className}>Timeline</Heading2>
-      <SmallMediumText>
+      <SmallMediumText className="timeline-description">
         Here is the breakdown of the time we anticipate using for the upcoming
         event.
       </SmallMediumText>

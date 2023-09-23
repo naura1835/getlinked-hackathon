@@ -14,6 +14,9 @@ import { SmallMediumText } from "../../globalStyles/text.styles";
 import CustomButton from "../customButton/customButton.components";
 import { useEffect } from "react";
 import gsap, { Power3 } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // eslint-disable-next-line react/prop-types
 const PrivacyTerms = ({ className }) => {

@@ -14,6 +14,13 @@ import {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navItems = [
+    { id: 1, name: "Timeline", url: "/timeline" },
+    { id: 2, name: "Overview", url: "/overview" },
+    { id: 3, name: "FAQs", url: "/faq" },
+    { id: 4, name: "Contact", url: "/contact" },
+  ];
+
   return (
     <NavBar>
       <Link to="/" style={{ color: "#fff" }}>
@@ -23,20 +30,25 @@ const Header = () => {
         </Logo>
       </Link>
       <MenuList $isOpen={isOpen}>
+        {navItems.map((item) => (
+          <MenuListItem key={item.id}>
+            <NavLink
+              className={({ isActive }) => (isActive ? "is-active" : "")}
+              to={item.url}
+            >
+              {item.name}
+            </NavLink>
+          </MenuListItem>
+        ))}
         <MenuListItem>
-          <NavLink to="/">Timeline</NavLink>
-        </MenuListItem>
-        <MenuListItem>
-          <NavLink to="/">Overview</NavLink>
-        </MenuListItem>
-        <MenuListItem>
-          <NavLink to="/">FAQs</NavLink>
-        </MenuListItem>
-        <MenuListItem>
-          <NavLink to="/contact">Contact</NavLink>
-        </MenuListItem>
-        <MenuListItem>
-          <NavLink to="/register">Register</NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "is-active--register" : ""
+            }
+            to="/register"
+          >
+            Register
+          </NavLink>
         </MenuListItem>
       </MenuList>
       <MenuIcon

@@ -6,6 +6,7 @@ import { CustomInputBar } from "../../components/customInputs/customInputs.compo
 import { SubmitButton } from "../../components/customButton/customButton.styles";
 
 import { Heading3, SmallMediumText } from "../../globalStyles/text.styles";
+import { blink } from "../../components/heroSection/heroSection.styles";
 
 export const BackArrowWrapper = styled.div`
   padding: 2.94rem 3.19rem 1.31rem;
@@ -39,6 +40,29 @@ export const Wrapper = styled.section`
 `;
 
 export const ContactForm = styled.div`
+  ${Heading3} {
+    position: relative;
+
+    &::before {
+      content: url("src/assets/grey-star.png");
+      position: absolute;
+      top: 50%;
+      right: 20%;
+      transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
+    }
+
+    &::after {
+      content: url("src/assets/pink-star.png");
+      position: absolute;
+      top: -100%;
+      left: 40%;
+      transform: scale(var(--scale-global));
+      animation: ${blink} 2s infinite;
+      animation-delay: 2s;
+    }
+  }
   @media ${breakpointsUp["tablet-landscape-up"]} {
     display: grid;
     place-items: center;
@@ -53,11 +77,30 @@ export const ContactForm = styled.div`
     ${Heading3} {
       justify-self: start;
       margin-left: 4rem;
+
+      &::before {
+        top: -180%;
+        right: -50%;
+      }
+
+      &::after {
+        top: -150%;
+        left: -120%;
+      }
     }
   }
 
   @media ${breakpointsUp["tablet-landscape-up"]} {
     padding: 4rem 0;
+  }
+
+  @media ${breakpointsUp["desktop-up"]} {
+    ${Heading3} {
+      &::after {
+        top: -150%;
+        left: -220%;
+      }
+    }
   }
 `;
 
@@ -66,6 +109,27 @@ export const ContactWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.56rem;
+  position: relative;
+
+  &::before {
+    content: url("src/assets/pink-star.png");
+    position: absolute;
+    bottom: 0%;
+    left: -5%;
+    transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 2s;
+  }
+
+  &::after {
+    content: url("src/assets/star.png");
+    position: absolute;
+    bottom: 25%;
+    right: -10%;
+    transform: scale(var(--scale-global));
+    animation: ${blink} 2s infinite;
+    animation-delay: 2s;
+  }
 
   ${CustomInputBar} {
     > input {
@@ -81,6 +145,17 @@ export const ContactWrapper = styled.form`
   }
 
   @media ${breakpointsUp["tablet-landscape-up"]} {
+    width: 100%;
+    padding: 0 4rem;
+
+    &::before {
+      left: 0%;
+    }
+
+    &::after {
+      right: -5%;
+    }
+
     ${CustomInputBar} {
       width: 27.3125rem;
       height: 2.9375rem;

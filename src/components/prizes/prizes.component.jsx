@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import gsap, { Power0 } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 import { float } from "../../utils/animation";
 
 import Trophy from "../../assets/svgs/trophy.svg?react";
@@ -19,6 +22,7 @@ import {
 } from "../../globalStyles/text.styles";
 
 // eslint-disable-next-line react/prop-types
+gsap.registerPlugin(ScrollTrigger);
 const Prizes = ({ className }) => {
   useEffect(() => {
     let tl = gsap.timeline({
