@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     margin-top: 4.4rem;
 
     &::after {
-      content: url("src/assets/grey-star.png");
+      content: url(".../assets/grey-star.png");
       position: absolute;
       top: -55%;
       right: 18%;
@@ -38,7 +38,7 @@ export const Wrapper = styled.div`
     &::before {
       content: "";
       display: block;
-      background: url("src/assets/svgs/lock-bg.svg");
+      background: url(".../assets/svgs/lock-bg.svg");
       background-size: cover;
       position: absolute;
       top: 0;
@@ -51,7 +51,7 @@ export const Wrapper = styled.div`
     }
 
     &::after {
-      content: url("src/assets/purple-star.png");
+      content: url(".../assets/purple-star.png");
       position: absolute;
       top: 10%;
       left: 5%;
@@ -81,7 +81,7 @@ export const Wrapper = styled.div`
     position: relative;
 
     &::before {
-      content: url("src/assets/purple-star.png");
+      content: url(".../assets/purple-star.png");
       position: absolute;
       top: 25%;
       right: 5%;
@@ -91,7 +91,7 @@ export const Wrapper = styled.div`
     }
 
     &::after {
-      content: url("src/assets/purple-star.png");
+      content: url(".../assets/purple-star.png");
       position: absolute;
       bottom: 20%;
       left: -15%;
@@ -130,7 +130,7 @@ export const Wrapper = styled.div`
       }
 
       &::before {
-        content: url("src/assets/grey-star.png");
+        content: url(".../assets/grey-star.png");
         position: absolute;
         top: 70%;
         right: -115%;
@@ -207,7 +207,7 @@ export const PolicyWrapper = styled(GlassWrapper)`
   position: relative;
 
   &::after {
-    content: url("src/assets/star.png");
+    content: url(".../assets/star.png");
     position: absolute;
     bottom: -23%;
     right: 23%;
@@ -265,7 +265,7 @@ export const PolicyListItem = styled.li`
   gap: 1rem;
 
   &::before {
-    content: url("/src/assets/list.png");
+    content: url(".../assets/list.png");
     position: relative;
     width: 1.0625rem;
     height: 1.0625rem;

@@ -5,6 +5,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { float } from "../../utils/animation";
 
+import BronzeMedal from "../../assets/bronze-medal.png";
+import GoldMedal from "../../assets/gold-medal.png";
+import SilverMedal from "../../assets/silver-medal.png";
 import Trophy from "../../assets/svgs/trophy.svg?react";
 
 import { DescriptionWrapper, SvgWrapper } from "../section/section.styles";
@@ -71,7 +74,7 @@ const Prizes = ({ className }) => {
       </SvgWrapper>
       <AwardDiv>
         <Position className="position--second">
-          <img src="src/assets/silver-medal.png" alt="silver medal" />
+          <img src={SilverMedal} alt="silver medal" />
           <PositionTitle>
             2nd
             <br /> Runner
@@ -83,7 +86,7 @@ const Prizes = ({ className }) => {
           color="#903AFF"
           bg="rgba(144, 58, 255, 0.12)"
         >
-          <img src="src/assets/gold-medal.png" alt="gold medal" />
+          <img src={GoldMedal} alt="gold medal" />
           <PositionTitle>
             1st
             <br /> Runner
@@ -91,7 +94,7 @@ const Prizes = ({ className }) => {
           <PrizeMoney color="#903AFF">N400,000</PrizeMoney>
         </Position>
         <Position className="position--third">
-          <img src="src/assets/bronze-medal.png" alt="bronze medal" />
+          <img src={BronzeMedal} alt="bronze medal" />
           <PositionTitle>
             3rd
             <br /> Runner

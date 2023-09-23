@@ -103,12 +103,3 @@ const PrivacyTerms = ({ className }) => {
 };
 
 export default PrivacyTerms;
-
-// const SheildLock = () => {
-//   return (
-//     <>
-//       <LockBg />
-//       <Lock />
-//     </>
-//   );
-// };

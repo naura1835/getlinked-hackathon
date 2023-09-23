@@ -1,6 +1,11 @@
 import gsap from "gsap";
 import { TextPlugin } from "gsap/all";
 
+import BlueFlare from "../../assets/Blue-Flare.png";
+import Boom from "../../assets/Boom.png";
+import Chain from "../../assets/Chain.png";
+import ManWearingGlasses from "../../assets/man-wearing-smart-glasses.png";
+
 import CustomButton from "../customButton/customButton.components";
 
 import { animateHeroSection } from "./heroSection.animation";
@@ -38,8 +43,8 @@ const HeroSection = () => {
           <Container>
             Hackathon <HighLightText>1.0</HighLightText>
           </Container>
-          <img src="src/assets/Chain.png" alt="chain" />
-          <img src="src/assets/Boom.png" alt="boom spark" />
+          <img src={Chain} alt="chain" />
+          <img src={Boom} alt="boom spark" />
         </Heading1>
         <Description className="description">
           Participate in getlinked tech Hackathon 2023 stand a chance to win a
@@ -52,15 +57,11 @@ const HeroSection = () => {
       </DescriptionWrapper>
       <ImageWrapper>
         <img
-          src="src/assets/man-wearing-smart-glasses.png"
+          src={ManWearingGlasses}
           className="man-wearing-glasses"
           alt="man wearing smart glasses touching virtual screen"
         />
-        <img
-          src="src/assets/Blue-Flare.png"
-          className="blue-flare"
-          alt="blue flare screen"
-        />
+        <img src={BlueFlare} className="blue-flare" alt="blue flare screen" />
       </ImageWrapper>
     </Wrapper>
   );
