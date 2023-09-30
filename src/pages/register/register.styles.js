@@ -96,6 +96,7 @@ export const RegisterForm = styled(ContactWrapper)`
     transform: scale(var(--scale-lg-global));
     animation: ${blink} 2s infinite;
     animation-delay: 2s;
+    z-index: -1;
   }
   ${Heading2} {
     display: none;
