@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import {
-  BodyIntroText,
-  Heading2,
-  Heading3,
-  SmallMediumText,
-} from "../../globalStyles/text.styles";
+
+import { Heading2, Heading3 } from "../../globalStyles/text.styles";
 import { SvgWrapper } from "../../components/section/section.styles";
 import { ContactWrapper } from "../contact/contact.styles";
 import { breakpointsUp } from "../../globalStyles/breakpoints";
@@ -188,87 +184,5 @@ export const CaptionText = styled.p`
   @media ${breakpointsUp["tablet-landscape-up"]} {
     font-size: 0.75rem;
     grid-column: 1/3;
-  }
-`;
-export const OverlayWrapper = styled.div`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(21, 14, 40, 0.93);
-  display: grid;
-  place-items: center;
-  justify-content: center;
-  z-index: 2;
-`;
-
-export const SuccessWrapper = styled.div`
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  border-radius: 0.3125rem;
-  border: 1px solid #d434fe;
-  background: rgba(255, 255, 255, 0.01);
-  padding: 1rem;
-  position: relative;
-
-  &::after {
-    content: url("./assets/pink-star.png");
-    position: absolute;
-    top: -5%;
-    right: 0%;
-    transform: scale(var(--scale-global));
-    animation: ${blink} 2s infinite;
-    animation-delay: 2s;
-  }
-  &::before {
-    content: url("./assets/pink-star.png");
-    position: absolute;
-    bottom: 4%;
-    right: 5%;
-    transform: scale(var(--scale-global));
-    animation: ${blink} 2s infinite;
-    animation-delay: 2s;
-  }
-
-  ${BodyIntroText} {
-    position: relative;
-
-    &::after {
-      content: url("./assets/grey-star.png");
-      position: absolute;
-      top: -170%;
-      left: 0%;
-      transform: scale(var(--scale-global));
-      animation: ${blink} 2s infinite;
-      animation-delay: 2s;
-    }
-  }
-
-  ${BodyIntroText}, ${SmallMediumText} {
-    text-align: center;
-
-    img {
-      vertical-align: text-top;
-    }
-  }
-
-  ${SubmitButton} {
-    margin-inline: auto;
-  }
-
-  @media ${breakpointsUp["tablet-landscape-up"]} {
-    height: 30rem;
-
-    img {
-      height: 15rem;
-      width: 15rem;
-      object-fit: cover;
-    }
-    &::before {
-      bottom: 0%;
-    }
   }
 `;

@@ -1,38 +1,36 @@
 import { useEffect, useState } from "react";
 
 import Header from "../../components/header/header.component";
+import Modal from "../../components/modal/modal.component";
+import ModalRegisterBody from "../../components/modalRegisterBody/modalRegisterBody.component";
+import { CustomSubmitButton } from "../../components/customButton/customButton.components";
+
+import useInput from "../../utils/useInput.hooks";
 
 import ManSitting from "../../assets/svgs/man-sitting.svg?react";
 import PeopleWalking from "../../assets/svgs/people-walking.svg?react";
-import LadyHappy from "../../assets/success.png";
-import Wink from "../../assets/wink.png";
 
+import { ContactForm } from "../contact/contact.styles";
 import {
   CaptionText,
   CategoryGroupSize,
-  OverlayWrapper,
   RegisterForm,
   RegisterHeader,
   SVGWrapper,
   SubTitle,
-  SuccessWrapper,
   Wrapper,
 } from "./register.styles";
 import {
-  BodyIntroText,
   Heading2,
   Heading3,
   HighLightText,
-  SmallMediumText,
 } from "../../globalStyles/text.styles";
 import {
   CustomCheckBox,
   CustomInput,
   CustomSelect,
 } from "../../components/customInputs/customInputs.component";
-import useInput from "../../utils/useInput.hooks";
-import { CustomSubmitButton } from "../../components/customButton/customButton.components";
-import { ContactForm } from "../contact/contact.styles";
+
 const Register = () => {
   const [categories, setCategories] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +73,6 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formValue);
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -113,27 +110,9 @@ const Register = () => {
         <Header />
       )}
       {isOpen && (
-        <OverlayWrapper>
-          <SuccessWrapper>
-            <img src={LadyHappy} alt="woman excited" />
-            <BodyIntroText>
-              Congratulations you have successfully Registered!
-            </BodyIntroText>
-            <SmallMediumText>
-              Yes, it was easy and you did it! check your mail box for next step
-              <img
-                src={Wink}
-                alt="wink emoji"
-                style={{ height: "18px", width: "18px" }}
-              />
-            </SmallMediumText>
-            <CustomSubmitButton
-              type="button"
-              text="Back"
-              handleClick={() => setIsOpen(false)}
-            />
-          </SuccessWrapper>
-        </OverlayWrapper>
+        <Modal setIsOpen={setIsOpen}>
+          <ModalRegisterBody setIsOpen={setIsOpen} />
+        </Modal>
       )}
       <Wrapper>
         <SVGWrapper>
