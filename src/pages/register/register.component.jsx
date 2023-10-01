@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+import { CategoriesContainer } from "../../components/categoriesContainer";
 
 import Header from "../../components/header/header.component";
 import Modal from "../../components/modal/modal.component";
@@ -30,9 +32,9 @@ import {
   CustomInput,
   CustomSelect,
 } from "../../components/customInputs/customInputs.component";
+import { submitToApi } from "../../utils/api";
 
 const Register = () => {
-  const [categories, setCategories] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const { formValue, handleChange } = useInput({
     teamName: "",
@@ -44,37 +46,8 @@ const Register = () => {
     agreement: false,
   });
 
-  useEffect(() => {
-    const fetchCategories = () => {
-      let myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-
-      let requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
-
-      fetch(
-        "https://backend.getlinked.ai/hackathon/categories-list",
-        requestOptions
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          result.unshift({ id: 0, name: "Select your category" });
-          setCategories(result);
-        })
-        .catch((error) => console.log("error", error));
-    };
-
-    fetchCategories();
-  }, []);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    let myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
 
     let raw = JSON.stringify({
       email: formValue.email,
@@ -83,23 +56,20 @@ const Register = () => {
       group_size: Number(formValue.groupSize),
       project_topic: formValue.projectTopic,
       category: Number(formValue.category),
-      privacy_poclicy_accepted: formValue.agreement,
+      privacy_policy_accepted: formValue.agreement,
     });
 
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
+    try {
+      const registerResponse = await submitToApi(
+        raw,
+        "https://backend.getlinked.ai/hackathon/registration"
+      );
+      console.log(registerResponse);
 
-    fetch("https://backend.getlinked.ai/hackathon/registration", requestOptions)
-      .then((response) => response.text())
-      .then((result) => {
-        console.log(result);
-        setIsOpen(true);
-      })
-      .catch((error) => console.log("error", error));
+      setIsOpen(true);
+    } catch (err) {
+      console.log("Error", err);
+    }
   };
 
   return (
@@ -165,15 +135,16 @@ const Register = () => {
               handleChange={handleChange}
             />
             <CategoryGroupSize>
-              <CustomSelect
-                label="category"
-                name="category"
-                labelText="Category"
-                value={formValue.category}
-                placeholder="Select your category"
-                optionsArray={categories}
-                handleChange={handleChange}
-              />
+              <CategoriesContainer>
+                <CustomSelect
+                  label="category"
+                  name="category"
+                  labelText="Category"
+                  value={formValue.category}
+                  placeholder="Select your category"
+                  handleChange={handleChange}
+                />
+              </CategoriesContainer>
               <CustomSelect
                 label="group-size"
                 name="groupSize"

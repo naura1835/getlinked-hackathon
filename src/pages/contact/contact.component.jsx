@@ -31,6 +31,7 @@ import {
   Socials,
   Wrapper,
 } from "./contact.styles";
+import { submitToApi } from "../../utils/api";
 
 const NavigateHome = () => {
   return (
@@ -50,11 +51,8 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
 
     let raw = JSON.stringify({
       email: formValue.email,
@@ -63,20 +61,16 @@ const Contact = () => {
       message: formValue.message,
     });
 
-    let requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch("https://backend.getlinked.ai/hackathon/contact-form", requestOptions)
-      .then((response) => response.text())
-      .then((result) => {
-        console.log(result);
-        resetFormFields;
-      })
-      .catch((error) => console.log("error", error));
+    try {
+      const contactInfo = await submitToApi(
+        raw,
+        "https://backend.getlinked.ai/hackathon/contact-form"
+      );
+      console.log(contactInfo);
+      resetFormFields();
+    } catch (err) {
+      console.log("error", err);
+    }
   };
   return (
     <>
